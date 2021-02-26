@@ -1,5 +1,60 @@
 <?
-		
+    $mysqli = new mysqli("localhost", "appstouc_ritz", "Start123!", "appstouc_ritz");
+    if ($mysqli === false)
+    {
+       echo("ERROR: Could not connect. " . mysqli_connect_error());
+    }
+
+    $name = $_POST['name'];
+    $DNI = $_POST['DNI'];
+    $ticket = $_POST['ticket'];
+    $date = $_POST['date'];
+    $amount = $_POST['amount']; 
+    $phone = $_POST['phone'];
+
+    $gano = false;
+    $found = false;
+
+    session_start();
+    $_SESSION['gano'] = "no";
+    $_SESSION['id'] = "";
+
+    $sql = "SELECT id,nombre,DNI,telefono,factura,fechaCompra,montoTicket,fecha,gano FROM participante WHERE DNI='$DNI'";
+
+    if ($result = $mysqli->query($sql))
+    {
+        if ($result->num_rows > 0)
+        {
+            while($row = $result->fetch_array())
+            {
+                 if($row[7]=="Si")
+                 {
+                    $gano = true;
+                 }
+
+                 $found = true;
+
+                 $_SESSION['id'] = $row[0];
+                 break;
+
+            }
+        }
+    }
+
+    $_SESSION['gano']  = $gano;
+
+    if($found==false)
+    {
+        $sql2 = "INSERT INTO participante (nombre,DNI,telefono,factura,fechaCompra,montoTicket) VALUES ('$name','$DNI','$phone','$ticket','$date','$amount')";
+
+        if ($mysqli->query($sql2) === true)
+        {
+            $lastID = $mysqli->insert_id;
+            $_SESSION['id'] = $lastID;
+        }
+    }
+    
+    echo ' <script type="text/javascript">window.location.href = "raspa.php";</script>';
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +82,7 @@
         <form action="formulario.php" method="post">
             <div class="form-row">
                 <div class="col">
-                    <div class="form-group text"><label for="nombreCompleto">Nombre completo:</label><input class="form-control" type="text" id="nombreCompleto" name="nacimiento" required=""></div>
+                    <div class="form-group text"><label for="nombreCompleto">Nombre completo:</label><input class="form-control" type="text" id="nombreCompleto" name="name" required=""></div>
                 </div>
             </div>
             <div class="form-row">
@@ -40,7 +95,7 @@
             </div>
             <div class="form-row">
                 <div class="col">
-                    <div class="form-group text"><label for="comprobante">Número de boleta o factura:</label><input class="form-control" type="text" id="comprobante" name="Ticket" required="" pattern="[A-Za-z0-9]{4}-[0-9]{8}"><small>Ejm: B123-12345678</small></div>
+                    <div class="form-group text"><label for="comprobante">Número de boleta o factura:</label><input class="form-control" type="text" id="comprobante" name="ticket" required="" pattern="[A-Za-z0-9]{4}-[0-9]{8}"><small>Ejm: B123-12345678</small></div>
                 </div>
             </div>
             <div class="form-row">
@@ -89,26 +144,7 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/modal-comprobante.js"></script>
 
-    <script type="text/javascript">
-    	$.ajax
-          (
-              {
-                type: "POST",
-                url: "checkUser.php",
-                data: "dataString",
-                data: 
-                { 
-                  	Email: document.getElementById("Email").value,
-              	},
-                success: function(data) 
-                {
-                	$('#emailInput').modal('toggle');
-              		document.getElementById("Email").value = " ";
-                }                         
-              }
-          );
 
-    </script>
 </body>
 
 </html>
