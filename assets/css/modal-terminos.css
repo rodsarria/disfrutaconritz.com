@@ -1,0 +1,23 @@
+#modalTerminos h1, #modalTerminos h2, #modalTerminos h3, #modalTerminos h4, #modalTerminos li, #modalTerminos p {
+  color: #444444;
+}
+
+#modalTerminos ol {
+  padding-inline-start: 20px;
+}
+
+#modalTerminos .modal-body {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+#modalTerminos .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #444;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+

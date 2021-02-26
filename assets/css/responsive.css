@@ -1,0 +1,15 @@
+@media screen and (max-width: 480px) {
+  .intro .subtitle {
+    /*color: red !important;*/
+    font-size: 24px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .intro .title {
+    font-size: 27px !important;
+    line-height: 32px !important;
+    /*color: green !important;*/
+  }
+}
+

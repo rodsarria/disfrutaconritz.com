@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Ritz</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crete+Round">
+    <link rel="stylesheet" href="assets/css/Rockwell.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <link rel="stylesheet" href="assets/css/modal-comprobante.css">
+    <link rel="stylesheet" href="assets/css/modal-terminos.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="min-height: 100%;min-height: 100vh;display: flex;align-items: center;background: url(&quot;assets/img/bg.png&quot;) center / cover no-repeat;font-family: 'Source Sans Pro', sans-serif;color: var(--white);font-size: 20px;line-height: 24px;">
+    <div class="container" style="margin-right: auto;margin-left: auto;max-width: 600px;padding-top: 30px;padding-bottom: 30px;">
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col text-center"><img src="assets/img/logo-ritz.png" style="max-width: 60%;"></div>
+        </div>
+        <form>
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group text"><label for="nombreCompleto">Nombre completo:</label><input class="form-control" type="text" id="nombreCompleto" required=""></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-sm-12 col-md-6">
+                    <div class="form-group text"><label for="dni">Documento de identidad:</label><input class="form-control" type="number" id="dni" required=""></div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="form-group text"><label for="telefono">Teléfono:</label><input class="form-control" type="number" id="telefono" required=""></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group text"><label for="comprobante">Número de boleta o factura:</label><input class="form-control" type="text" id="comprobante" required="" pattern="[A-Za-z0-9]{4}-[0-9]{8}"><small>Ejm: B123-12345678</small></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-sm-12 col-md-6">
+                    <div class="form-group text"><label for="fecha">Fecha de compra:</label><input class="form-control" id="fecha" type="date" required=""></div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="form-group text"><label id="monto" for="fecha">Monto total del ticket:</label><input class="form-control" type="number" id="monto" required=""></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group text">
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1" style="transform: scale(1.5);" required=""><label class="form-check-label" for="formCheck-1" style="margin-left: 5px;">Acepto los&nbsp;<span style="cursor: pointer;color: #ffee00;" data-toggle="modal" data-target="#modalTerminos">términos y condiciones</span><span>.</span></label></div>
+                    </div>
+                    <div class="form-actions" style="background-color: transparent;text-align: center;margin-top: 30px;"><button class="btn btn-primary btn-custom text-rockwell" type="submit">JUGAR</button></div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modalTerminos">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Términos y Condiciones</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body text-justify">
+                    <p>Promoción válida para peruanos y extranjeros mayores de 18 años del 11 al 31 de marzo del 2021 y/o hasta agotar stock. Válido a nivel nacional (Lima y Provincia). Participa sólo la marca RITZ.&nbsp;Promoción válida sólo en tiendas MAKRO.&nbsp;Premios: (01) vale de consumo por el monto de S/800 para hacer uso en la tienda THE BARBECUE STORE (El vale tendrá vigencia hasta el 31 de diciembre del 2021) (10) tablas de madera (Marca xxxx) (10) set de piqueos (Marca xxxx).</p>
+                    <p>Para participar el cliente deberá:</p>
+                    <ol>
+                        <li>Comprar S/10 o más en las marca RITZ. Por cada S/10 o más, el consumidor obtendrá sólo una opción para participar (Una participación por boleta o factura).</li>
+                        <li>Ingresar al landing www.disfrutaconritz.com o escanear el código QR que aparece en los visuales que lo rediccionará a la página.</li>
+                        <li>El cliente deberá ingresar sus datos personales (Nombre, apellido, teléfono y fecha de nacimiento) luego, deberá detallar el número de boleta o factura, la fecha y&nbsp;el monto total de del comprabante.</li>
+                        <li>De haber completado todos los campos exitosamente podrá jugar el raspa y gana. Para descubrir si ganó el premio deberá desplazar el dedo de derecha a izquierda de arriba y hacia abajo en el caso de ingresar por un celular y de ingresar en una computadora deberá moverlo de la misma manera pero con el mouse.</li>
+                        <li>En caso de ser ganador, la agencia encargada de la entrega de premio Grupo Punto Estrategico SAC se comunicará&nbsp;en un plazo máximo de 15 días para coordinar la entrega de su premio. En caso de no recibir respuesta alguna por parte de los ganadores durante los próximos 30&nbsp;días, perderán su derecho reclamar los mismos.</li>
+                    </ol>
+                    <p>Para el reclamo del premio, el cliente debe presentar la boleta o factura con la que participo, así como su DNI, pasaporte y/o carnet de extranjería en físico. </p>
+                    <p>Excepcionalmente, y por motivos debidamente justificados, Mondelez Perú S.A. se reserva el derecho de modificar en cualquier momento los presentes términos y condiciones, reglamentos de uso, instrucciones, avisos que resulten de La Campaña u otros. Asimismo, de manera unilateral o por motivos de Fuerza Mayor, Mondelez se reserva el derecho de suspender, interrumpir, dejar de operar o modificar las fechas de inicio y término de La Campaña en cualquier momento, lo que comunicará oportunamente a los participantes según el medio que crea conveniente. En caso de existir dudas o discrepancias en la interpretación de los presentes términos y condiciones, prevalecerá el criterio de Mondelez. </p>
+                    <p>Al enviar sus datos personales, el cliente autoriza a Mondelez Perú S.A. para almacenar los datos personales proporcionados en su Banco de Datos Personales denominado “CONSUMIDORES” debidamente inscrito en el Registro Nacional de Protección de Datos Personales. Asimismo, el titular consiente a la transferencia de sus datos personales por parte de Mondelez a Grupo Punto Estrategico S.A.C. a fin de que el segundo pueda hacer uso de los mismos para la ejecución de la presente promoción.&nbsp; Cada participante podrá revocar su consentimiento o ejercer los derechos de acceso, rectificación u oposición remitiendo una comunicación a la siguiente dirección electrónica: promomdlz@puntoestrategico.com.pe.</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cerrar</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/modal-comprobante.js"></script>
+</body>
+
+</html>

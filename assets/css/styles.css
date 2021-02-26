@@ -1,0 +1,29 @@
+.btn-custom {
+  color: #006596;
+  background-color: #ffee00;
+  font-size: 36px;
+  width: 240px;
+  border-radius: 25px;
+  border: 0px;
+  box-shadow: 4px 8px 12px rgb(0 0 0 / 40%);
+  padding-top: 16px;
+  padding-bottom: 0px;
+}
+
+.btn-custom:hover {
+  background-color: #ffee00;
+  box-shadow: 5px 15px 24px rgba(0, 0, 0, 0.4);
+  color: #006596;
+  transform: translateY(-5px);
+}
+
+.big-number {
+  font-size: 64px;
+  color: #ffee00;
+}
+
+.text-rockwell {
+  font-family: 'Rockwell','Crete Round', serif;
+  font-weight: 700;
+}
+
