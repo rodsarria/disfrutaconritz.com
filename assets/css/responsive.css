@@ -1,15 +1,72 @@
 @media screen and (max-width: 480px) {
-  .intro .subtitle {
-    /*color: red !important;*/
-    font-size: 24px !important;
+  .intro h2 {
+    font-size: 23px !important;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .intro .title {
-    font-size: 27px !important;
-    line-height: 32px !important;
-    /*color: green !important;*/
+  .intro h1 {
+    font-size: 26px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .desc h2 {
+    font-size: 20px !important;
+    border-radius: 12px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .big-number {
+    font-size: 48px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  img.logo {
+    max-width: 66% !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .btn-custom {
+    font-size: 20px !important;
+    width: 180px !important;
+    border-radius: .66em !important;
+    box-shadow: 3px 6px 9px rgb(0 0 0 / 40%) !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .octogono {
+    max-height: 80px !important;
+    margin-bottom: -10px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  form {
+    font-size: 18px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .texto-desc-premio {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .texto-cant-premio {
+    font-size: 40px !important;
+    text-align: right !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  img.tbs {
+    max-height: 24px !important;
   }
 }
 

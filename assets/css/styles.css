@@ -1,13 +1,12 @@
 .btn-custom {
   color: #006596;
   background-color: #ffee00;
-  font-size: 36px;
+  font-size: 28px;
   width: 240px;
-  border-radius: 25px;
+  border-radius: .66em;
   border: 0px;
   box-shadow: 4px 8px 12px rgb(0 0 0 / 40%);
-  padding-top: 16px;
-  padding-bottom: 0px;
+  margin-bottom: 20px;
 }
 
 .btn-custom:hover {
@@ -20,10 +19,71 @@
 .big-number {
   font-size: 64px;
   color: #ffee00;
+  text-align: center !important;
 }
 
-.text-rockwell {
-  font-family: 'Rockwell','Crete Round', serif;
+.arvo {
+  font-family: 'Arvo', serif;
   font-weight: 700;
+}
+
+img.logo {
+  max-width: 75%;
+}
+
+img.premio {
+  max-width: 100%;
+  width: 280px;
+}
+
+img.tbs {
+  max-height: 36px;
+}
+
+img.logo-premios {
+  max-width: 40%;
+}
+
+.intro h1, .intro h2 {
+  margin-bottom: -.25rem;
+}
+
+h1, h2 {
+  font-family: 'Arvo', serif;
+  font-weight: 700;
+}
+
+.octogono {
+  max-height: 120px;
+  margin-bottom: -20px;
+}
+
+.texto-desc-premio {
+  font-size: 36px;
+  line-height: 1em;
+  font-weight: 600;
+}
+
+.texto-cant-premio {
+  font-size: 64px;
+  color: #ffee00;
+  text-align: right;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #D4393B;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.back-link:hover {
+  color: #ffee00;
+  text-decoration: none;
+}
+
+.back-link:active {
+  color: #ffee00;
+  text-decoration: none;
 }
 

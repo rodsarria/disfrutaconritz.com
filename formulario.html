@@ -1,18 +1,13 @@
-<?
-		
-?>
-
 <!DOCTYPE html>
-<html>
+<html lang="es-419">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Ritz</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crete+Round">
-    <link rel="stylesheet" href="assets/css/Rockwell.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700">
     <link rel="stylesheet" href="assets/css/modal-comprobante.css">
     <link rel="stylesheet" href="assets/css/modal-terminos.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
@@ -21,13 +16,18 @@
 
 <body style="min-height: 100%;min-height: 100vh;display: flex;align-items: center;background: url(&quot;assets/img/bg.png&quot;) center / cover no-repeat;font-family: 'Source Sans Pro', sans-serif;color: var(--white);font-size: 20px;line-height: 24px;">
     <div class="container" style="margin-right: auto;margin-left: auto;max-width: 600px;padding-top: 30px;padding-bottom: 30px;">
-        <div class="row" style="margin-bottom: 30px;">
+        <div class="row">
             <div class="col text-center"><img src="assets/img/logo-ritz.png" style="max-width: 60%;"></div>
+        </div>
+        <div class="row">
+            <div class="col intro text-center">
+                <h1 class="py-4">COMPLETA TUS DATOS:</h1>
+            </div>
         </div>
         <form action="formulario.php" method="post">
             <div class="form-row">
                 <div class="col">
-                    <div class="form-group text"><label for="nombreCompleto">Nombre completo:</label><input class="form-control" type="text" id="nombreCompleto" name="nacimiento" required=""></div>
+                    <div class="form-group text"><label for="nombreCompleto">Nombre completo:</label><input class="form-control" type="text" id="nombreCompleto" required="" name="name"></div>
                 </div>
             </div>
             <div class="form-row">
@@ -40,7 +40,7 @@
             </div>
             <div class="form-row">
                 <div class="col">
-                    <div class="form-group text"><label for="comprobante">Número de boleta o factura:</label><input class="form-control" type="text" id="comprobante" name="Ticket" required="" pattern="[A-Za-z0-9]{4}-[0-9]{8}"><small>Ejm: B123-12345678</small></div>
+                    <div class="form-group text"><label for="comprobante">Número de comprobante:</label><input class="form-control" type="text" id="comprobante" required="" pattern="[A-Za-z0-9]{4}-[0-9]{8}" name="ticket"><small>Ejm: B123-12345678</small></div>
                 </div>
             </div>
             <div class="form-row">
@@ -48,7 +48,11 @@
                     <div class="form-group text"><label for="fecha">Fecha de compra:</label><input class="form-control" id="fecha" type="date" required="" name="date"></div>
                 </div>
                 <div class="col-sm-12 col-md-6">
-                    <div class="form-group text"><label id="monto" for="fecha">Monto total del ticket:</label><input class="form-control" type="number" id="monto" required="" name="amount"></div>
+                    <div class="form-group text"><label id="monto" for="fecha">Monto total del ticket:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"><span class="input-group-text">S/</span></div><input class="form-control" type="number" id="monto" required="" name="amount">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="form-row">
@@ -56,7 +60,7 @@
                     <div class="form-group text">
                         <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1" style="transform: scale(1.5);" required=""><label class="form-check-label" for="formCheck-1" style="margin-left: 5px;">Acepto los&nbsp;<span style="cursor: pointer;color: #ffee00;" data-toggle="modal" data-target="#modalTerminos">términos y condiciones</span><span>.</span></label></div>
                     </div>
-                    <div class="form-actions" style="background-color: transparent;text-align: center;margin-top: 30px;"><button class="btn btn-primary btn-custom text-rockwell" type="submit">JUGAR</button></div>
+                    <div class="form-actions" style="background-color: transparent;text-align: center;margin-top: 30px;"><button class="btn btn-custom arvo">JUGAR</button></div>
                 </div>
             </div>
         </form>
@@ -88,27 +92,6 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/modal-comprobante.js"></script>
-
-    <script type="text/javascript">
-    	$.ajax
-          (
-              {
-                type: "POST",
-                url: "checkUser.php",
-                data: "dataString",
-                data: 
-                { 
-                  	Email: document.getElementById("Email").value,
-              	},
-                success: function(data) 
-                {
-                	$('#emailInput').modal('toggle');
-              		document.getElementById("Email").value = " ";
-                }                         
-              }
-          );
-
-    </script>
 </body>
 
 </html>
