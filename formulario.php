@@ -33,7 +33,7 @@
                      {
                         $gano = true;
                      }
-
+                     
                      $found = true;
 
                      $_SESSION['id'] = $row[0];
@@ -56,7 +56,7 @@
             }
         }
         
-        echo ' <script type="text/javascript">window.location.href = "raspa.php";</script>';
+        echo ' <script type="text/javascript">window.location.href = "raspa-gana.php";</script>';
     }
 
     
