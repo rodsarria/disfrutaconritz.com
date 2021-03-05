@@ -128,7 +128,11 @@
     <script>
             function callback(d) 
             { 
-                d.container.style.backgroundImage = 'url(assets/images/demo1-end.gif)'; d.container.innerHTML = ''; 
+                var win = "<? echo $win;?>";
+
+                if(win=="ganaste.html")d.container.style.backgroundImage = 'url(assets/img/animacion-ganador.gif)'; 
+
+                d.container.innerHTML = ''; 
 
                 setTimeout(goPage, 5000);
             }
@@ -152,7 +156,7 @@
                         "background":"assets/img/<? echo $cartilla; ?>",
                         "foreground":"assets/img/foreground.jpg",
                         "percent":70,
-                        "coin":"assets/images/coin2.png",
+                        "coin":"assets/img/moneda.png",
                         "thickness":18,
                         "counter":"percent",
                         "callback":"callback"
