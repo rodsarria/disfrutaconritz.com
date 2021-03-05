@@ -88,3 +88,8 @@ h1, h2 {
   text-decoration: none;
 }
 
+.main-banner {
+  height: 250px;
+  border-bottom: solid 5px #ffee00;
+}
+
