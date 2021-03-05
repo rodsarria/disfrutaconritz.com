@@ -55,7 +55,8 @@ h1, h2 {
 
 .octogono {
   max-height: 120px;
-  margin-bottom: -20px;
+  /*margin-bottom: -20px;*/
+  margin-top: 10px;
 }
 
 .texto-desc-premio {

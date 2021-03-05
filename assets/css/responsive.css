@@ -1,3 +1,21 @@
+@media screen and (max-width: 768px) {
+  .main-banner {
+    height: 220px !important;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .main-banner {
+    height: 190px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-banner {
+    height: 160px !important;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .intro h2 {
     font-size: 23px !important;
