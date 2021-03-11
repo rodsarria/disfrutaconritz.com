@@ -20,6 +20,7 @@
   font-size: 64px;
   color: #ffee00;
   text-align: center !important;
+  max-width: 50px;
 }
 
 .arvo {
