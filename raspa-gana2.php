@@ -1,5 +1,5 @@
 <?
-    $mysqli = new mysqli("localhost", "usazbelp6cy1e", "]bd2nH11i2{3", "dbeddf6cemjkpg");
+    $mysqli = new mysqli("localhost", "appstouc_ritz", "Start123!", "appstouc_ritz");
     if ($mysqli === false)
     {
        echo("ERROR: Could not connect. " . mysqli_connect_error());
@@ -50,9 +50,7 @@
 
     $cartilla = "cartilla-sigue-intentando.png";
 
-    //$gano = "no";
-
-    //echo "$stock $gano $randomNum";
+    $gano = "no";
 
     if($stock == true && $gano == "no" && $randomNum<=$probabilidad)
     {
@@ -75,8 +73,6 @@
             }
         }
     }
-
-    //echo "$cartilla $win";
 
 ?>
 
@@ -134,27 +130,7 @@
             { 
                 var win = "<? echo $win;?>";
 
-                if(win=="ganaste.html")
-                {
-
-
-                    d.container.style.backgroundImage = 'url(assets/img/animacion-ganador.gif)'; 
-
-                    $.ajax
-                    (
-                        {
-                          type: "POST",
-                          url: "addGanaste.php?id=<? echo $id; ?>",
-                          data: "dataString",
-                          success: function(data) 
-                          {
-                                
-                          }                         
-                        }
-                    );
-                }
-
-                    
+                if(win=="ganaste.html")d.container.style.backgroundImage = 'url(assets/img/animacion-ganador.gif)'; 
 
                 d.container.innerHTML = ''; 
 

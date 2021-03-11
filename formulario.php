@@ -1,9 +1,12 @@
 <?
-    $mysqli = new mysqli("localhost", "appstouc_ritz", "Start123!", "appstouc_ritz");
+    $mysqli = new mysqli("localhost", "usazbelp6cy1e", "]bd2nH11i2{3", "dbeddf6cemjkpg");
     if ($mysqli === false)
     {
        echo("ERROR: Could not connect. " . mysqli_connect_error());
     }
+
+    //echo "Test";
+    //echo mysqli_connect_error();
 
     $name = $_POST['name'];
     $DNI = $_POST['DNI'];
@@ -17,7 +20,7 @@
 
     if(isset($_POST['submit'])) 
     {
-        //echo "NEPE";
+        //echo "aaa";
         session_start();
         $_SESSION['gano'] = "no";
         $_SESSION['id'] = "";
@@ -51,7 +54,7 @@
 
         if($found==false)
         {
-            //echo "FOUND2";
+           // echo "FOUND2";
             $sql = "INSERT INTO participante (nombre,DNI,telefono,factura,fechaCompra,montoTicket) VALUES ('$name','$DNI','$phone','$ticket','$date','$amount')";
 
             if ($mysqli->query($sql) === true)
